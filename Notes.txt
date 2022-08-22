@@ -1,0 +1,70 @@
+Angular Building Blocks 
+--  
+
+  Components
+  Directives 
+  Services
+  Interface
+  Models/Classes
+  Pipes 
+  Guards
+  Modules 
+  Interceptor
+
+
+Concepts
+--
+  Data Binding 
+  Routing 
+    Nested Routing 
+  RxJS
+  Any to Any Comp 
+  Lazy Loading Modules 
+
+  Unit Testing in Angular 
+
+--
+ NgRx 
+ --
+  
+
+
+Folder Structure
+--
+  src/
+    app/
+      ...
+      ...
+      ...
+      ... 
+      header/
+        ...
+        ...
+        ...
+        ...
+      footer/
+        ...
+        ...
+      menu/
+        ...
+        ...
+        ...
+      
+      
+---
+ViewEncapsulation
+---
+
+Data Binding 
+---
+  TS => HTML 
+
+  1. Interpolation 
+  2. Property Binding 
+  3. Event Binding 
+  4. Two way Binding 
+  5. Custom Property Binding 
+  6. Custom Event Binding
+
+
+
