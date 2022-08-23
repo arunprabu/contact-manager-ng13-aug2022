@@ -1,4 +1,9 @@
 1. Conditional Content Projection in Angular / Conditional Transclusion in Angular 
   / multi-slot content projection 
   
+2. Active menu should be set in routing  [TODO]
+3. Page Title should be changed [TODO]
+4. // TODO: disable the button on click in concepts comp 
+5. // TODO: change the button label to 'Clicked'  on click in concepts comp 
+
 
