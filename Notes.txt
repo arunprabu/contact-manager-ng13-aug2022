@@ -29,7 +29,7 @@ Concepts
   
 
 
-Folder Structure
+Folder Structure - Feature-wise and Building Block Wise 
 --
   src/
     app/
@@ -37,34 +37,133 @@ Folder Structure
       ...
       ...
       ... 
-      header/
-        ...
-        ...
-        ...
-        ...
-      footer/
-        ...
-        ...
-      menu/
-        ...
-        ...
-        ...
-      
+      shared/
+        components/
+          header/
+            ...
+            ...
+            ...
+            ...
+          footer/
+            ...
+            ...
+          menu/
+            ...
+            ...
+            ...
+      home/
+      concepts/
+        components/
+          ...
+          ...
+          ...
+      contacts/
+      about/
       
 ---
 ViewEncapsulation
 ---
+
+Routing 
+--
+  SPA Characteristics (7)
+  --
+    1. Page should not refresh / reload [DONE]
+    2. URL should change [DONE]
+    3. History should be maintained w/o page refresh [DONE]
+    4. Header and Footer should be intact. Should not be loaded again n again [DONE]
+    5. In between header and footer - page should be updated [DONE]
+    6. Active menu should be set [TODO]
+    7. Page Title should be changed [TODO]
+
+  Step 0:
+  ---
+    Identifying the URLs and components 
+      Home (HomeComponent)                - localhost:4200/           
+      Concepts (ConceptsComponent)        - localhost:4200/concepts
+      Contact Mgr (ContactsComponent)     - localhost:4200/contacts
+      Unit Testing (UnitTestingDemoComp)  - localhost:4200/contacts
+      Products (ProductsComponent)        - localhost:4200/products
+      About  (AboutComponent)             - localhost:4200/about 
+
+    Step 1:
+    --  
+      Let's setup the URLs in menu comp.html 
+
+    Step 2: 
+    --
+      Check the app. URL is not stable. LEt's fix it. 
+
+      Let's create the components for the URLs 
+        ng g c home -t -s 
+        ng g c concepts -s 
+        ng g c contacts -s 
+        ng g c about -s 
+
+    Step 3
+    --
+      We need to config the URLs in app-routing.module.ts 
+
+      const routes: Routes = [
+        { path: '', component: HomeComponent },
+        { path: 'concepts', component: ConceptsComponent },
+        { path: 'contacts', component: ContactsComponent },
+        { path: 'about', component: AboutComponent }
+      ];
+
+    Step 4:
+    --
+      Let's load the comp in between header and footer
+      in app.comp.html, add <router-outlet></router-outlet> 
+
+    Step 5: 
+    --
+      Check the app. Page is still getting reloaded. Let's fix it. 
+
+      change all href to routerLink in menu.comp.html 
+
+    That's all. 
+    -- 
+
 
 Data Binding 
 ---
   TS => HTML 
 
   1. Interpolation 
+      {{}}
+      TS => HTML 
+  
   2. Property Binding 
+      []
+      TS => HTML 
+
   3. Event Binding 
+      ()
+      TS <= HTML 
+
   4. Two way Binding 
-  5. Custom Property Binding 
+      [(ngModel)] 
+      TS <=> HTML 
+      Note: you need form elements such as input, textarea, select
+
+  5. Custom Property Binding [DONE]
+
   6. Custom Event Binding
 
 
+--
 
+Cross Component Communication
+--
+  1. Parent to Child Component Communication
+      Using Custom Property Binding 
+
+  2. Child to Parent Component Communication
+      2.1 Using Custom Event Binding 
+      2.2 Using @ViewChild() //:TODO
+
+  3. Any to Any Component Communication
+      3.1 Using RxJs/Observables 
+      3.2 Using NgRx (framework) = Redux Concepts + RxJS + Ng 
+      3.3 Using Redux (Not Recommended)
