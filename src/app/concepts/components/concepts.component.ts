@@ -20,7 +20,16 @@ export class ConceptsComponent implements OnInit {
 
   // custom prop binding related
   myAge = 50;
-  
+
+  dataFromChildComponent = {
+    name: '',
+    city: ''
+  };
+
+  // directives related
+  isLoggedIn = false;
+  skills = ['js', 'ng', 'node', 'react'];
+
   constructor() { }
 
   ngOnInit(): void {
@@ -35,5 +44,11 @@ export class ConceptsComponent implements OnInit {
     // TODO: change the button label to 'Clicked'
   }
 
+
+  // Step 5: Listener for the emitted custom event
+  handleProfileLoaded(event: any){
+    console.log(event);
+    this.dataFromChildComponent = event;// For Step 6-- Refer concepts.comp.html
+  }
 
 }

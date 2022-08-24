@@ -12,6 +12,8 @@ import { ConceptsComponent } from './concepts/components/concepts.component';
 import { ContactsComponent } from './contacts/contacts.component';
 import { AboutComponent } from './about/about.component';
 import { CpbComponent } from './concepts/components/cpb/cpb.component';
+import { CebComponent } from './concepts/components/ceb/ceb.component';
+import { ColorizerDirective } from './concepts/directives/colorizer.directive';
 
 /* Main Switching Box */
 @NgModule({
@@ -24,7 +26,9 @@ import { CpbComponent } from './concepts/components/cpb/cpb.component';
     ConceptsComponent,
     ContactsComponent,
     AboutComponent,
-    CpbComponent
+    CpbComponent,
+    CebComponent,
+    ColorizerDirective
   ],
   imports: [
     BrowserModule,

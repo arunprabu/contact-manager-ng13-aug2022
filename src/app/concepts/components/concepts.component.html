@@ -1,5 +1,8 @@
 <div class="container-fluid mt-3">
   
+  <!-- Step 6 of CEB : display the data in parent comp -->
+  <p>Data Received from Child Component| Name: {{dataFromChildComponent.name}} | City:{{dataFromChildComponent.city}}</p>
+
   <nav>
     <div class="nav nav-tabs" id="nav-tab" role="tablist">
       <a class="nav-item nav-link active" data-bs-toggle="tab" data-bs-target="#basic-databinding" role="tab"
@@ -62,12 +65,54 @@
 
     <div class="tab-pane fade" id="ceb-databinding" role="tabpanel" aria-labelledby="ceb-databinding-tab">
       <h2>Child to Parent Comp Communication using Custom Event Binding</h2>
-      
+      <!-- Step 4 of CEB -- Handle the emitted event with a listener -- thru $event receiving the data-->
+      <app-ceb (profileLoaded)="handleProfileLoaded($event)"></app-ceb>
     </div>
 
     <div class="tab-pane fade" id="directives-tab" role="tabpanel" aria-labelledby="directives-tab">
       <h2>Directives</h2>
+
+      <pre>
+        Directives
+        ---
+          * Special Instructions to the DOM 
+
+          1. Attribute Directives 
+              routerLink, routerLinkActive, routerLinkActiveOptions, 
+
+          2. Structural Directives 
+              *ngIf, *ngFor, ngSwitch...
+
+          3. Custom Attribute Directives 
+          4. Custom Structural Directives [TODO]
+      </pre>
+
+      <h3>*ngIf Demo</h3>
+      <div class="alert alert-success" *ngIf="isLoggedIn; else NotAuthBox">
+        Thanks for logging in.. You can access premium features of the app!
+      </div>
+      <ng-template #NotAuthBox>
+        <div class="alert alert-danger">
+          Not Logged In
+        </div>
+      </ng-template>
+
+      <h3>*ngFor Demo</h3>
+      <ul>
+        <li *ngFor="let skill of skills;">{{skill}}</li>
+        <!-- TODO: Find index in the above *ngFor and display the skills with serial number -->
+      </ul>
       
+      <!-- TODO: Try ngSwitch -->
+
+      <h3>Custom Attribute Directives</h3>
+      <div appColorizer>
+        Demo of Custom Attribute Directive - colorizer
+        <br>
+        ng g d concepts/directives/colorizer
+      </div>
+
+
     </div>
 
     <div class="tab-pane fade" id="pipes-tab" role="tabpanel" aria-labelledby="pipes-tab">

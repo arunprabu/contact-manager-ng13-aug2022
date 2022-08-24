@@ -5,5 +5,11 @@
 3. Page Title should be changed [TODO]
 4. // TODO: disable the button on click in concepts comp 
 5. // TODO: change the button label to 'Clicked'  on click in concepts comp 
+6. In Directives, Find index in *ngFor and display the skills with serial number
+7. Try ngSwitch in Directives
+8.
+
+
+
 
 
