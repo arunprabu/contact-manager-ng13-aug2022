@@ -36,10 +36,11 @@ export class ConceptsComponent implements OnInit {
   }
 
   // event binding related 
-  handleClickMe( event: Event ){
+  handleClickMe( event: any){
     console.log(event); // event object
     alert('clicked');
 
+    event.target.innerText = 'Clicked';
     // TODO: disable the button
     // TODO: change the button label to 'Clicked'
   }

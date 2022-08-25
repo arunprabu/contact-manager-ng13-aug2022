@@ -3,6 +3,7 @@ Angular Building Blocks
 
   Components
   Directives 
+
   Services
   Interfaces
   Models/Classes
@@ -57,7 +58,19 @@ Folder Structure - Feature-wise and Building Block Wise
           ...
           ...
           ...
+        directives/
+          ...
+          ...
       contacts/
+        components/
+          ...
+          ...
+          ...
+        services/
+          ...
+          ...
+        models/
+          ...
       about/
       
 ---
@@ -137,6 +150,12 @@ Data Binding
   2. Property Binding 
       []
       TS => HTML 
+        [value]="appName"
+        Class Binding 
+          <div [ngClass]="{}">
+        
+        Style Binding
+          <div [ngStyle]="{}">
 
   3. Event Binding 
       ()
