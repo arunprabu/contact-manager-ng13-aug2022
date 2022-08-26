@@ -186,3 +186,28 @@ Cross Component Communication
       3.1 Using RxJs/Observables 
       3.2 Using NgRx (framework) = Redux Concepts + RxJS + Ng 
       3.3 Using Redux (Not Recommended)
+
+Forms in Angular
+--
+  1. Template-Driven Forms 
+      * Made with templates (html)
+      * Easiest type of Form
+      * For validations - directives can be used
+
+      Disadvantages
+      * Not suitable for complex form validations
+      * Not suitable for Unit Testing 
+
+      available in FormsModule of @angular/forms
+
+
+  2. Reactive Forms / Data-Driven Forms (Recommended)
+      * Made with templates (html) + TS
+      * Easy type of Form
+
+      Advantages:
+      * suitable for complex form validations
+      * suitable for Unit Testing 
+
+      available in ReactiveFormsModule of @angular/forms
+
