@@ -12,6 +12,7 @@ export class ContactDetailsComponent implements OnInit {
   
   contactData: any;
   dupContactData: any;
+  isUpdated = false;
 
   constructor(private contactService: ContactService, private route: ActivatedRoute) { }
 
@@ -35,6 +36,14 @@ export class ContactDetailsComponent implements OnInit {
 
   handleUpdateContact(contactForm: any): void {
     console.log(contactForm); //form state
-    console.log(this.dupContactData );
+    console.log(this.dupContactData ); // submittable form data
+
+    this.contactService.updateContactById(this.dupContactData)
+      .subscribe((res: any) => {
+        console.log(res);
+        if(res && res.id) {
+          this.isUpdated = true;
+        }
+      });
   }
 }

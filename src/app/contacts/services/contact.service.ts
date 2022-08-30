@@ -45,5 +45,13 @@ export class ContactService {
       }));
   }
   
+  updateContactById(contactData: any): any {
+    console.log(contactData);
+    return this.http.put(this.contactsApiURL + '/' + contactData.id, contactData)
+      .pipe( map( (res: any) => {
+        console.log(res);
+        return res;
+      }));
+  }
   
 }
