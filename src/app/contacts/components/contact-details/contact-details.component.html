@@ -9,7 +9,7 @@
         <p>Phone: {{contactData?.phone}}</p>
         <p>Email: {{contactData?.email}}</p>
         <button type="button" class="btn btn-primary" 
-        data-bs-toggle="modal" data-bs-target="#editContactModal">Edit</button>
+        data-bs-toggle="modal" data-bs-target="#editContactModal" (click)="handleEditModalOpen()">Edit</button>
         <button type="button" class="btn btn-danger">Delete</button>
 
         <!-- Modal -->
@@ -21,20 +21,30 @@
                 <h5 class="modal-title" id="exampleModalLabel">Update Contact</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
               </div>
-              <div class="modal-body">
-                <form>
+              <div class="modal-body" *ngIf="dupContactData">
+                <form #updateContactForm="ngForm" (ngSubmit)="handleUpdateContact(updateContactForm)">
                   <div class="form-group row mb-3">
                     <label for="staticEmail" class="col-sm-2 col-form-label">Name</label>
                     <div class="col-sm-10">
                       <input type="text" class="form-control" placeholder="Enter name" 
-                      required>
+                      [(ngModel)]="dupContactData.name" name="contactName" 
+                      #name="ngModel" required
+                      [ngClass]="{ 'is-invalid': (name.touched || updateContactForm.submitted) && name.errors?.['required']}">
+                      <div class="invalid-feedback">
+                        Name is required
+                      </div>
                     </div>
                   </div>
                   <div class="form-group row mb-3">
                     <label for="staticEmail" class="col-sm-2 col-form-label">Phone</label>
                     <div class="col-sm-10">
                       <input type="text" class="form-control" placeholder="Enter Phone"
-                      required >
+                       [(ngModel)]="dupContactData.phone" name="phone"
+                      #phone="ngModel" required
+                      [ngClass]="{ 'is-invalid': (phone.touched || updateContactForm.submitted) && phone.errors?.['required']}">
+                      <div class="invalid-feedback">
+                        Phone is required
+                      </div>
                     </div>
                   </div>
                   <div class="form-group row mb-3">
@@ -42,7 +52,12 @@
                     <div class="col-sm-10">
                       <input type="email" class="form-control" 
                         placeholder="Enter Email" 
-                       required>
+                        [(ngModel)]="dupContactData.email" name="email"
+                        #email="ngModel" required email
+                        [ngClass]="{ 'is-invalid': (email.touched || updateContactForm.submitted) && email.errors?.['required']}">
+                      <div class="invalid-feedback">
+                         Email is required
+                      </div>
                     </div>
                   </div>
 
@@ -52,7 +67,7 @@
 
                   <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <button type="submit" class="btn btn-primary">Save changes</button>
+                    <button type="submit" class="btn btn-primary" [disabled]="updateContactForm.invalid">Save changes</button>
                   </div>
                 </form>
               </div>
