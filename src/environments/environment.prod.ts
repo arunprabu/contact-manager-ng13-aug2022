@@ -1,3 +1,4 @@
 export const environment = {
-  production: true
+  production: true,
+  CONTACTS_API_URL: 'https://realapi.com/users'
 };

@@ -3,11 +3,11 @@
   <div class="row">
     <div class="card col-md-12">
       <div class="card-body">
-        <h5 class="card-title">John</h5>
+        <h5 class="card-title">{{contactData?.name}}</h5>
         <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
           card's content.</p>
-        <p>Phone: 3453546</p>
-        <p>Email: a@b.com</p>
+        <p>Phone: {{contactData?.phone}}</p>
+        <p>Email: {{contactData?.email}}</p>
         <button type="button" class="btn btn-primary" 
         data-bs-toggle="modal" data-bs-target="#editContactModal">Edit</button>
         <button type="button" class="btn btn-danger">Delete</button>

@@ -12,12 +12,20 @@
 
   <div class="row">
 
-    <div class="card col-sm-3">
+    <div class="spinner-border text-primary" role="status" *ngIf="isLoading">
+      <span class="visually-hidden">Loading...</span>
+    </div>
+
+    <div class="card col-sm-3" *ngFor="let user of userList">
       <div class="card-body">
-        <h5 class="card-title">John</h5>
-        <p class="card-text">345634756</p>
-        <a routerLink="/contacts/1" class="card-link">View Details</a>
+        <h5 class="card-title">{{user.name}}</h5>
+        <p class="card-text">{{user.phone}}</p>
+        <a routerLink="/contacts/{{user.id}}" class="card-link">View Details</a>
       </div>
+    </div>
+
+    <div class="alert alert-danger" role="alert" *ngIf="isError">
+      Unable to load users. Some error occured! Try again later!
     </div>
     
   </div>
