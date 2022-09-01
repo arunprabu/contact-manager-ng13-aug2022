@@ -3,10 +3,11 @@ Angular Building Blocks
 
   Components
   Directives 
-
   Services
+
   Interfaces
   Models/Classes
+
   Pipes 
   Guards
   Modules 
@@ -18,8 +19,10 @@ Concepts
   Data Binding 
   Routing 
     Nested Routing 
+  Lifecycle Hooks 
   RxJS
   Any to Any Comp 
+
   Lazy Loading Modules 
 
   Unit Testing in Angular 
@@ -210,4 +213,84 @@ Forms in Angular
       * suitable for Unit Testing 
 
       available in ReactiveFormsModule of @angular/forms
+
+
+---
+Interfaces, Classes, Models Example
+---
+// custom data type
+export interface IUser{ 
+    name: string;
+    city: string;
+}
+
+// app-wide dep Injectable util class 
+// ng g cl contacts/utils/user 
+@Injectable({
+    providedIn: 'root'
+})
+class User{
+
+    findLastUser(){
+        
+    }
+
+    getLastLoginTime(){
+
+    }
+}
+
+class MyComp {
+
+    userData: IUser = { // custom type 
+        name: 'John',
+        city: "London",
+    }
+    
+    constructor(private myUser: User){ // dep inj 
+        this.myUser.findLastUser();//method from util class
+    }
+    
+}
+======
+
+
+
+
+--
+Agenda
+--
+  RxJS
+  Interfaces
+
+  Models/Classes
+
+
+  Modules
+    Feature Modules
+    Feature Routing Modules
+  
+  Any to Any Comp 
+  
+
+Friday, Monday
+--
+  Unit Testing (2 Days)
+
+Tuesday
+--
+  Pipes
+  Guards
+  Interceptor
+  Authentication 
+  Build & Deployment
+  Lazy Loading Modules 
+
+Wednesday
+--
+  NgRx 
+  D-Day 
+
+
+
 

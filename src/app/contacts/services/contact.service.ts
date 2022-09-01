@@ -1,7 +1,8 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { map } from 'rxjs';
+import { map, Observable } from 'rxjs';
 import { environment } from 'src/environments/environment';
+import { IContact } from '../models/icontact';
 
 @Injectable({
   providedIn: 'root'
@@ -27,10 +28,11 @@ export class ContactService {
       }));
   }
 
-  getContacts(){
+  getContacts(): Observable<IContact[]>{
     console.log('Inside getContacts');
-    return this.http.get(this.contactsApiURL)
-      .pipe( map( (res: any) => {
+    return this.http.get<IContact[]>(this.contactsApiURL)
+      .pipe( map( (res: IContact[]) => {
+        // enrich, filter, sort, convert, remove
         console.log(res);
         return res;
       }));
