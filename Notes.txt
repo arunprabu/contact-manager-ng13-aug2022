@@ -262,19 +262,18 @@ Agenda
 --
   RxJS
   Interfaces
-
   Models/Classes
-
 
   Modules
     Feature Modules
     Feature Routing Modules
   
-  Any to Any Comp 
   
 
 Friday, Monday
 --
+  Page Not Found (404)
+  Any to Any Comp 
   Unit Testing (2 Days)
 
 Tuesday
