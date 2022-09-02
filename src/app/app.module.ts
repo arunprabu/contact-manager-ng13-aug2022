@@ -15,6 +15,8 @@ import { CpbComponent } from './concepts/components/cpb/cpb.component';
 import { CebComponent } from './concepts/components/ceb/ceb.component';
 import { ColorizerDirective } from './concepts/directives/colorizer.directive';
 import { ContactsModule } from './contacts/contacts.module';
+import { PageNotFoundComponent } from './shared/components/page-not-found/page-not-found.component';
+import { ProductsModule } from './products/products.module';
 
 /* Main Switching Box */
 @NgModule({
@@ -28,14 +30,16 @@ import { ContactsModule } from './contacts/contacts.module';
     AboutComponent,
     CpbComponent,
     CebComponent,
-    ColorizerDirective
+    ColorizerDirective,
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,
     FormsModule, // needed for ngModel
+    ContactsModule,
+    ProductsModule,
     AppRoutingModule,
-    HttpClientModule,
-    ContactsModule
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent] // AppModule should be bootstrapped with AppComponent
