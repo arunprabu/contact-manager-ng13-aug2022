@@ -22,7 +22,7 @@ export class ContactService {
       // 2.3 What's the REST API Client Tool? HttpClient 
     return this.http.post(this.contactsApiURL, formData)
       .pipe( map((res:any) => { // 3. get the res from the rest api 
-        console.log(res);
+        // console.log(res);
         // 4. send the res to the comp 
         return res;
       }));
@@ -33,7 +33,7 @@ export class ContactService {
     return this.http.get<IContact[]>(this.contactsApiURL)
       .pipe( map( (res: IContact[]) => {
         // enrich, filter, sort, convert, remove
-        console.log(res);
+        // console.log(res);
         return res;
       }));
   }
@@ -42,7 +42,7 @@ export class ContactService {
     console.log('Inside getContactById');
     return this.http.get(this.contactsApiURL + '/' + id)
       .pipe( map( (res: any) => {
-        console.log(res);
+        // console.log(res);
         return res;
       }));
   }
@@ -51,7 +51,7 @@ export class ContactService {
     console.log(contactData);
     return this.http.put(this.contactsApiURL + '/' + contactData.id, contactData)
       .pipe( map( (res: any) => {
-        console.log(res);
+        // console.log(res);
         return res;
       }));
   }

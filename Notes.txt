@@ -263,7 +263,6 @@ Agenda
 
 Friday, Monday
 -- 
-  Any to Any Comp 
   Unit Testing (2 Days)
 
 Tuesday
@@ -282,4 +281,19 @@ Wednesday
 
 
 
+
+--
+Automated Testing 
+---
+  0. Static Type Checking 
+      Tools: TypeScript, FlowJS , PropTypes
+
+  1. Unit Testing 
+      Tools: Jasmine JS (Framework) + Karma (Test Runner)
+
+  2. Integrated Testing 
+      Tools: Jasmine JS (Framework) + Karma (Test Runner)
+
+  3. End to End Testing / E2E 
+      Tools: Protractor or CypressJs or Selenium 
 

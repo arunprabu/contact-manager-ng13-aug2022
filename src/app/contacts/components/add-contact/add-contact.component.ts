@@ -30,12 +30,11 @@ export class AddContactComponent implements OnInit {
   }
 
   handleAddContact(): void{
-    console.log(this.addContactForm.value);
+    // console.log(this.addContactForm.value);
 
     // 2. send the above form data to service
     this.contactService.createContact(this.addContactForm.value)
       .subscribe( (res: any) => { // 3. get the res from the service 
-        console.log(res);
         if(res && res.id) {
           this.isSaved = true;
         }

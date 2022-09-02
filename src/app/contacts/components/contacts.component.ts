@@ -27,7 +27,6 @@ export class ContactsComponent implements OnInit {
       
     this.contactService.getContacts()
       .subscribe( (res: IContact[]) => {
-        console.log(res);
         if(res && res.length> 0){
           this.isLoading = false;
           this.userList = res;

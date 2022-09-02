@@ -1,4 +1,6 @@
+import { HttpClientModule } from '@angular/common/http';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { ContactService } from '../../services/contact.service';
 
 import { AddContactComponent } from './add-contact.component';
 
@@ -8,7 +10,11 @@ describe('AddContactComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ AddContactComponent ]
+      declarations: [ AddContactComponent ],
+      providers: [ContactService],
+      imports: [
+        HttpClientModule
+      ]
     })
     .compileComponents();
   });

@@ -30,9 +30,6 @@ export class ColorizerDirective {
 
   @HostListener('click', ['$event'])
   handleClick(event: any){
-    console.log(event);
-    console.log('Clicked');
-    console.dir(event.target);
   
     this.renderer.setStyle(event.target, 'background-color', 'red');    
   }

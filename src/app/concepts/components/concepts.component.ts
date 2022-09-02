@@ -48,7 +48,6 @@ export class ConceptsComponent implements OnInit {
 
   // Step 5: Listener for the emitted custom event
   handleProfileLoaded(event: any){
-    console.log(event);
     this.dataFromChildComponent = event;// For Step 6-- Refer concepts.comp.html
   }
 
