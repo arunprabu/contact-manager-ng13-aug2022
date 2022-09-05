@@ -32,17 +32,10 @@ describe('AppComponent', () => {
   });
 
   // test spec #2
-  it(`should have as title 'contact-manager-ng13'`, () => {
+  it(`should have as title 'Contact Manager App'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
-    const app = fixture.componentInstance;
-    expect(app.title).toEqual('contact-manager-ng13');
+    const app = fixture.componentInstance; // we are taking up app comp ts  for testing
+    expect(app.title).toEqual('Contact Manager App!');
   });
 
-  // test spec #3
-  it('should render title', () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    fixture.detectChanges();
-    const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('.content span')?.textContent).toContain('contact-manager-ng13 app is running!');
-  });
 });

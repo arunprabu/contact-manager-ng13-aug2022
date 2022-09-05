@@ -17,6 +17,9 @@ import { ColorizerDirective } from './concepts/directives/colorizer.directive';
 import { ContactsModule } from './contacts/contacts.module';
 import { PageNotFoundComponent } from './shared/components/page-not-found/page-not-found.component';
 import { ProductsModule } from './products/products.module';
+import { UnitTestingDemoComponent } from './unit-testing-demo/unit-testing-demo.component';
+import { CalcComponent } from './unit-testing-demo/components/calc/calc.component';
+import { BlogComponent } from './unit-testing-demo/components/blog/blog.component';
 
 /* Main Switching Box */
 @NgModule({
@@ -31,7 +34,10 @@ import { ProductsModule } from './products/products.module';
     CpbComponent,
     CebComponent,
     ColorizerDirective,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    UnitTestingDemoComponent,
+    CalcComponent,
+    BlogComponent
   ],
   imports: [
     BrowserModule,

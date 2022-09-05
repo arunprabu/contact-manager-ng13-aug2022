@@ -7,5 +7,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss'] // styles can be many. but optional.
 })
 export class AppComponent {
-  title = 'contact-manager-ng13';
+  title = 'Contact Manager App!';
 }
