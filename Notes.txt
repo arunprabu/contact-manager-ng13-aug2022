@@ -75,6 +75,12 @@ Folder Structure - Feature-wise and Building Block Wise
         models/
           ...
       about/
+      auth/
+        components/
+          login/
+        services/
+          auth/
+
       
 ---
 ViewEncapsulation
@@ -267,10 +273,11 @@ Friday, Monday
 
 Tuesday
 --
-  Pipes
   Guards
   Interceptor
   Authentication 
+
+  Pipes
   Build & Deployment
   Lazy Loading Modules 
 
