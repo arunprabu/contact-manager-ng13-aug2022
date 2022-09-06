@@ -118,6 +118,15 @@
 
     <div class="tab-pane fade" id="pipes-tab" role="tabpanel" aria-labelledby="pipes-tab">
       <h2>Pipes</h2>
+      <p>{{randomTxt}}</p>
+      <p>{{randomTxt | uppercase }}</p>
+      <p>{{randomTxt | lowercase }}</p>
+
+      <hr>
+      <p>{{today}}</p>
+      <p>{{today | date }} </p>
+      <p>{{today | date: 'dd/MMMM/yyyy' }}</p>
+      <p>{{today | date: 'MMM dd, yyyy hh:mm:ss a' }}</p>
     </div>
 
   </div>

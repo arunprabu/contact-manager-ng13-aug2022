@@ -30,6 +30,11 @@ export class ConceptsComponent implements OnInit {
   isLoggedIn = false;
   skills = ['js', 'ng', 'node', 'react'];
 
+  // pipes related
+  randomTxt = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec efficitur erat lacus';
+
+  today: Date = new Date();
+
   constructor() { }
 
   ngOnInit(): void {
