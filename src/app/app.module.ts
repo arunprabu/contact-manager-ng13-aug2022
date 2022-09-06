@@ -20,6 +20,7 @@ import { ProductsModule } from './products/products.module';
 import { UnitTestingDemoComponent } from './unit-testing-demo/unit-testing-demo.component';
 import { CalcComponent } from './unit-testing-demo/components/calc/calc.component';
 import { BlogComponent } from './unit-testing-demo/components/blog/blog.component';
+import { LoginComponent } from './auth/components/login/login.component';
 
 /* Main Switching Box */
 @NgModule({
@@ -37,7 +38,8 @@ import { BlogComponent } from './unit-testing-demo/components/blog/blog.componen
     PageNotFoundComponent,
     UnitTestingDemoComponent,
     CalcComponent,
-    BlogComponent
+    BlogComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
