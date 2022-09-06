@@ -273,9 +273,7 @@ Friday, Monday
 
 Tuesday
 --
-  Guards
-  Interceptor
-  Authentication 
+
 
   Pipes
   Build & Deployment

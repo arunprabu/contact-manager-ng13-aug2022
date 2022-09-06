@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -21,6 +21,7 @@ import { UnitTestingDemoComponent } from './unit-testing-demo/unit-testing-demo.
 import { CalcComponent } from './unit-testing-demo/components/calc/calc.component';
 import { BlogComponent } from './unit-testing-demo/components/blog/blog.component';
 import { LoginComponent } from './auth/components/login/login.component';
+import { AuthInterceptor } from './shared/interceptors/auth.interceptor';
 
 /* Main Switching Box */
 @NgModule({
@@ -49,7 +50,11 @@ import { LoginComponent } from './auth/components/login/login.component';
     AppRoutingModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [
+    { 
+      provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true
+    }
+  ],
   bootstrap: [AppComponent] // AppModule should be bootstrapped with AppComponent
 })
 export class AppModule { }
