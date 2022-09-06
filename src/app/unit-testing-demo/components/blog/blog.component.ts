@@ -16,7 +16,6 @@ export class BlogComponent implements OnInit {
   ngOnInit(): void {
     this.blogService.getPosts()
       .subscribe( (res: any) => {
-        console.log(res);
         this.postList = res;
       })
   }
