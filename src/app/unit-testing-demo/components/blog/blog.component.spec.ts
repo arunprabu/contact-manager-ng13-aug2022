@@ -13,13 +13,13 @@ describe('BlogComponent', () => {
   const mockPostList: any[] = [
     {
       id: 9,
-      title: "nesciunt iure omnis dolorem tempora et accusantium",
-      body: "consectetur animi nesciunt iure dolore\nenim quia ant voluptas autem voluptas"
+      title: 'nesciunt iure omnis dolorem tempora et accusantium',
+      body: 'consectetur animi nesciunt iure dolore\nenim quia ant voluptas autem voluptas'
     },
     {
       id: 10,
-      title: "optio molestias id quia eum",
-      body: "quo et expedita modi cum officia vel magni\ndus veritatis error"
+      title: 'optio molestias id quia eum',
+      body: 'quo et expedita modi cum officia vel magni\ndus veritatis error'
     }
   ]
 
@@ -38,7 +38,7 @@ describe('BlogComponent', () => {
         }
       ]
     })
-    .compileComponents();
+      .compileComponents();
   });
 
   beforeEach(() => {

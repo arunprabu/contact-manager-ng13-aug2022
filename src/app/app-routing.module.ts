@@ -17,6 +17,10 @@ const routes: Routes = [
   { path: 'about', component: AboutComponent, canActivate: [ AuthGuard ] },
   { path: 'unit-testing', component: UnitTestingDemoComponent },
   { path: 'login', component: LoginComponent },
+  {
+    path: 'contacts',
+    loadChildren: () => import('./contacts/contacts.module').then(m => m.ContactsModule)
+  },
   { path: '**', component: PageNotFoundComponent }
 ];
 

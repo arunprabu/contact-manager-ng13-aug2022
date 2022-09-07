@@ -47,7 +47,6 @@ import { EllipsisPipe } from './shared/pipes/ellipsis.pipe';
   imports: [
     BrowserModule,
     FormsModule, // needed for ngModel
-    ContactsModule,
     ProductsModule,
     AppRoutingModule,
     HttpClientModule

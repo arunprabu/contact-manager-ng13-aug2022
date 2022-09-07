@@ -18,7 +18,7 @@ describe('AddContactComponent', () => {
         ReactiveFormsModule
       ]
     })
-    .compileComponents();
+      .compileComponents();
   });
 
   beforeEach(() => {

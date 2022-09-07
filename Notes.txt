@@ -268,9 +268,15 @@ Agenda
 Wednesday
 --
 
-  Pipes 
-    Custom Pipe 
   Build & Deployment
+    build checklist 
+    -
+      1. remove all console.logs 
+      2. try linting 
+          ng lint 
+
+    ng build 
+
   Lazy Loading Modules 
   
   NgRx 

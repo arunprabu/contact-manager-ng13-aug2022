@@ -14,7 +14,7 @@ describe('HeaderComponent', () => {
         MenuComponent 
       ]
     })
-    .compileComponents();
+      .compileComponents();
   });
 
   beforeEach(() => {

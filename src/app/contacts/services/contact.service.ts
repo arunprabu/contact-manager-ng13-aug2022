@@ -17,9 +17,9 @@ export class ContactService {
     console.log(formData);
     
     // 2. send the form data to the REST API
-      // 2.1 What's the REST API endpoint? 'https://jsonplaceholder.typicode.com/users'
-      // 2.2 What is the Http Method? POST 
-      // 2.3 What's the REST API Client Tool? HttpClient 
+    // 2.1 What's the REST API endpoint? 'https://jsonplaceholder.typicode.com/users'
+    // 2.2 What is the Http Method? POST 
+    // 2.3 What's the REST API Client Tool? HttpClient 
     return this.http.post(this.contactsApiURL, formData)
       .pipe( map((res:any) => { // 3. get the res from the rest api 
         // console.log(res);

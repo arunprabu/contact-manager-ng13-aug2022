@@ -7,9 +7,9 @@ import { AddContactComponent } from './components/add-contact/add-contact.compon
 import { ContactDetailsComponent } from './components/contact-details/contact-details.component';
 
 const contactRoutes: Routes = [
-  { path: 'contacts', component: ContactsComponent },
-  { path: 'contacts/add', component: AddContactComponent },
-  { path: 'contacts/:contactId', component: ContactDetailsComponent }, // contactId is the URL param
+  { path: '', component: ContactsComponent },
+  { path: 'add', component: AddContactComponent },
+  { path: ':contactId', component: ContactDetailsComponent }, // contactId is the URL param
 ]
 
 @NgModule({

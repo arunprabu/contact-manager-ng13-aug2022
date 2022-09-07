@@ -13,7 +13,7 @@ describe('CalcComponent', () => {
     await TestBed.configureTestingModule({
       declarations: [ CalcComponent ]
     })
-    .compileComponents();
+      .compileComponents();
   });
 
   beforeEach(() => {

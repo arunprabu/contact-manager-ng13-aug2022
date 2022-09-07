@@ -22,7 +22,7 @@ describe('ConceptsComponent', () => {
         FormsModule
       ]
     })
-    .compileComponents();
+      .compileComponents();
   });
 
   beforeEach(() => {

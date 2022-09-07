@@ -24,7 +24,7 @@ describe('LoginComponent', () => {
         AuthService
       ]
     })
-    .compileComponents();
+      .compileComponents();
   });
 
   beforeEach(() => {

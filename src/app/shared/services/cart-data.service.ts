@@ -30,11 +30,11 @@ export class CartDataService {
 
   updateCart(product: any){
     console.log(product);
-     // Let's update the cart items
-     this.latestCartItems.pipe(take(1)).subscribe( (defaultCartItems) => {
+    // Let's update the cart items
+    this.latestCartItems.pipe(take(1)).subscribe( (defaultCartItems) => {
       console.log(defaultCartItems);
       const newCartItems = [...defaultCartItems, product];
       this.cartItemList.next(newCartItems);
-     });
+    });
   }
 }

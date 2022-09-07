@@ -8,13 +8,13 @@ describe('EllipsisPipe', () => {
   });
 
   // positive test 
-  it(`transform 'random' to 'random...'`, () => {
+  it('transform \'random\' to \'random...\'', () => {
     const pipe = new EllipsisPipe();
     expect(pipe.transform('random')).toBe('random...');
   });
 
   // negative test
-  it(`transform '' to ''`, () => {
+  it('transform \'\' to \'\'', () => {
     const pipe = new EllipsisPipe();
     expect(pipe.transform('')).toBe('');
   });

@@ -11,7 +11,7 @@ describe('UnitTestingDemoComponent', () => {
     await TestBed.configureTestingModule({
       declarations: [ UnitTestingDemoComponent ]
     })
-    .compileComponents();
+      .compileComponents();
   });
 
   beforeEach(() => {

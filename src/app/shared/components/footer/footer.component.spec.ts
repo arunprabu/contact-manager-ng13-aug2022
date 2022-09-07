@@ -14,7 +14,7 @@ describe('FooterComponent', () => {
         MenuComponent
       ]
     })
-    .compileComponents();
+      .compileComponents();
   });
 
   beforeEach(() => {

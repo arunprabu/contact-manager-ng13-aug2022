@@ -36,7 +36,7 @@ describe('AppComponent', () => {
   });
 
   // test spec #2
-  it(`should have as title 'Contact Manager App'`, () => {
+  it('should have as title \'Contact Manager App\'', () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance; // we are taking up app comp ts  for testing
     expect(app.title).toEqual('Contact Manager App!');
