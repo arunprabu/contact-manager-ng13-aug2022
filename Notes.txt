@@ -4,14 +4,13 @@ Angular Building Blocks
   Components
   Directives 
   Services
-
   Interfaces
   Models/Classes
-
-  Pipes 
   Guards
   Modules 
   Interceptor
+
+  Pipes 
 
 
 Concepts
@@ -266,21 +265,14 @@ class MyComp {
 --
 Agenda
 
-
-Friday, Monday
--- 
-  Unit Testing (2 Days)
-
-Tuesday
---
-
-
-  Pipes
-  Build & Deployment
-  Lazy Loading Modules 
-
 Wednesday
 --
+
+  Pipes 
+    Custom Pipe 
+  Build & Deployment
+  Lazy Loading Modules 
+  
   NgRx 
   D-Day 
 

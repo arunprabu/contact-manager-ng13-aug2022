@@ -1,5 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { FormsModule } from '@angular/forms';
+import { EllipsisPipe } from 'src/app/shared/pipes/ellipsis.pipe';
 import { CebComponent } from './ceb/ceb.component';
 
 import { ConceptsComponent } from './concepts.component';
@@ -14,7 +15,8 @@ describe('ConceptsComponent', () => {
       declarations: [
         ConceptsComponent,
         CebComponent,
-        CpbComponent
+        CpbComponent,
+        EllipsisPipe
       ],
       imports: [
         FormsModule

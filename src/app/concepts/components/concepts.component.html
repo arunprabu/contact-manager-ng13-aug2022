@@ -127,6 +127,13 @@
       <p>{{today | date }} </p>
       <p>{{today | date: 'dd/MMMM/yyyy' }}</p>
       <p>{{today | date: 'MMM dd, yyyy hh:mm:ss a' }}</p>
+
+      <hr>
+      <h4>Custom Pipe</h4>
+      <p>{{randomTxt}}</p>
+      <p>{{randomTxt | ellipsis }}</p>
+      <p>{{randomTxt | ellipsis: 20 }}</p>
+      <p>{{randomTxt | ellipsis: 40 }}</p>
     </div>
 
   </div>

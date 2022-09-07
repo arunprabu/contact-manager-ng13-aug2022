@@ -22,6 +22,7 @@ import { CalcComponent } from './unit-testing-demo/components/calc/calc.componen
 import { BlogComponent } from './unit-testing-demo/components/blog/blog.component';
 import { LoginComponent } from './auth/components/login/login.component';
 import { AuthInterceptor } from './shared/interceptors/auth.interceptor';
+import { EllipsisPipe } from './shared/pipes/ellipsis.pipe';
 
 /* Main Switching Box */
 @NgModule({
@@ -40,7 +41,8 @@ import { AuthInterceptor } from './shared/interceptors/auth.interceptor';
     UnitTestingDemoComponent,
     CalcComponent,
     BlogComponent,
-    LoginComponent
+    LoginComponent,
+    EllipsisPipe
   ],
   imports: [
     BrowserModule,
